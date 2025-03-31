@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "Shopping List Manager",
+    "version": "1.0",
+    "description": "A simple shopping list extension. Save and manage items from online stores. Shopping list icons created by Flat Icons - Flaticon https://www.flaticon.com/free-icons/shopping-list",
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "32": "icons/icon32.png",
+            "64": "icons/icon64.png",
+            "128": "icons/icon128.png"
+        },
+        "default_title": "Shopping List Manager"
+    },
+    "icons": {
+        "32": "icons/icon32.png",
+        "64": "icons/icon64.png",
+        "128": "icons/icon128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["popup.js"],
+            "run_at": "document_end"
+        }
+    ]
+}

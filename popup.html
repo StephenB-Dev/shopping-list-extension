@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping List Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>My Shopping List</h1>
+        <div id="add-item">
+            <form>
+               <input id="item-title" type="text" placeholder="Item Name" required>
+                <input id="item-url" type="text" placeholder="Item URL" required>
+                <input id="item-price" type="text" placeholder="Item Price" required/>
+                <select id="item-category">
+                    <option value="None">Select Category</option>
+                    <option value="Groceries">Groceries</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Other">Other</option>
+                    <option value="None">None</option>
+                </select>
+                <button id="auto-fill-button" class="styled-button">Auto-Fill</button>
+                <button id="add-button" class="styled-button">Add Item</button> 
+            </form>
+            <button id="options-button" class="accordion">Options</button>
+        <div id="sort-items" class="panel">
+            <select id="sort-options">
+                <option value="">Sort Options</option>
+                <option value="alphabetical">Alphabetical</option>
+                <option value="date-added">Date Added</option>
+                <option value="price">Price</option>
+            </select>
+            <input id="search-input" type="text" placeholder="Search Items">
+        </div>
+        <div id="items-list">
+            <ul id="items"></ul>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
